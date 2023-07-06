@@ -1,1 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/isPhTOcA)
+# Week 4 RevoU Assignment! 
+
+## Hello I'm Hilmy Rasyad
+Sorry, this repository is still under construction. thanks for stopping by.
+
+since you are here, you can check other repositories by clicking below
+[First Week](https://hlmyrsyd.netlify.app/)<br>
+[Second Week](https://hlmyrsyd1.netlify.app/)<br>
+[Third Week](https://hlmyrsyd2.netlify.app/)
