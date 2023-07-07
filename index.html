@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+    name="description"
+    content="A web application to show minimalism in interior"
+    >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="responsive" href="responsive.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <span class="nav-logo">
+            <strong><a href="https://github.com/hlmyrsyd" target="_blank">&copy; Code by hlmyrsyd</a></strong>
+        </span>
+        <a onclick="myFunction()" class="dark-mode-btn" >
+            <p>dark mode</p>
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#section-photo">Photo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-article">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-form">Join Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <header class="full-screen" id="header">
+        <div class="marquee-w">
+            <div class="marquee">
+                <span>HILMY RASYAD&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <div class="marquee marquee2">
+                <span>HILMY RASYAD&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+        <h1>Hello!</h1>
+    </header>
+    <section id="section-article">
+        <article>
+            <hgroup>
+                <h2>About.<em>Me</em></h2>
+                <br>
+                <p>
+                    Hi, my name is Hilmy Rasyad, Bandung based <em>designer</em> and <em>photographer</em> who learn <b>software engineering</b>
+            </hgroup>
+            <figure>
+                <picture>
+                    <source media="(min-width:1000px)" srcset="img/About-1.png">
+                    <img src="img/about-img.jpg" alt="picture of hilmy rasyad" style="width: auto;">
+                </picture>
+                <figcaption>
+                    Hello I'm <em>Designer</em>
+                </figcaption>
+            </figure>
+        </article>
+    </section>
+    <section id="section-contact">
+        <h2>Lets.<em>Collab</em></h2>
+        <div class="contact">
+            <div class="option"><a href="#" target="_blank">Email</a></div>
+            <div class="option"><a href="#" target="_blank">Phone</a></div>
+    </section>
+    <footer>
+        <p> &copy;Copyright @hlmyrsyd 2023</p>
+    </footer>
+</body>
+</html>

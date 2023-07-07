@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+    }
+
+@font-face {
+    font-family: "Arcon";
+    src: url("font/Arcon-Rounded-Regular.otf") format("opentype");
+}
+
+body {
+    background-color: white;
+    color: #111;
+    transition: .5s;
+}
+
+/* transitions start */
+
+h2 {
+    transition: .3s;
+}
+
+h2:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+.marquee-w {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 140px;
+    top: 54.1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    color: white;
+    font-weight: 900;
+}
+.marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    font-family: 'Arcon';
+    text-align: center;
+    white-space: nowrap;
+    min-width: 100%;
+    height: 100%;
+    line-height: 140px;
+    font-size: 150px;
+    animation: marquee 20s linear infinite;
+}
+.marquee2 span {
+    animation-delay: 10s;
+}
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* transitions end */
+
+.dark-mode {
+    background-color: #111;
+    color: white;
+    transition: .5s;
+}
+
+/* nav start */
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    z-index: 2;
+}
+
+nav .nav-logo {
+    margin: 0 26px;
+}
+
+nav .nav-logo a {
+    text-decoration: none;
+    color: #444;
+}
+
+nav .nav-logo a:hover {
+    color: whitesmoke;
+    transition: .3s;
+}
+
+nav .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+nav .dark-mode-btn {
+    display: flex;
+    justify-content: center;
+    height: 18px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    filter: brightness(.3);
+}
+
+nav .dark-mode-btn:hover {
+    background-color: #555;
+    transition: .3s;
+}
+
+nav .dark-mode-btn p:hover {
+    transition: .3s;
+    cursor: pointer;
+    color: white;
+}
+
+nav .nav-menu {
+    margin: 0 8px;
+}
+
+nav .nav-menu li a {
+    text-decoration: none;
+    padding: 10px 8px;
+    border-radius: 10px;
+    color: #444;
+}
+
+nav .nav-menu li a:hover {
+    transition: .3s;
+    color: whitesmoke;
+}
+
+nav .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav .dark-mode-btn {
+        position: inherit;
+        display: flex;
+        left: 0;
+        right: 0;
+        width: 0%;
+        margin: 0 50%;
+        justify-content: center;
+    }
+    
+    nav .nav-menu {
+        position: fixed;
+        left: -102%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    nav .nav-menu.active {
+        left: 0;
+    }
+
+    nav .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    nav .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    nav .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+/* nav end */
+/* header start */
+.full-screen {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/header-img.jpg);
+    background-position: bottom center;
+    background-size: cover;
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.full-screen h1 {
+    font-size: 3em;
+    animation: fadeleft 2s forwards;
+    opacity: 0;
+    font-family: 'Arcon';
+}
+
+@keyframes fadeleft {
+    0% {
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+/* header end */
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    font-size: 2em;
+}
+
+/* article section start */
+#section-article article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    margin: 0 16px;
+    padding: 30px;
+}
+
+article figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article figure img {
+    height: 400px;
+    width: fit-content;
+    border-radius: 15px;
+    margin: 16px;
+    transition: .5s;
+}
+
+article figure img:hover {
+    scale: 1.2;
+    transform: rotate(5deg);
+}
+/* article section end */
+/* contact section start */
+#section-contact div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+}
+
+#section-contact .contact a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#section-contact .contact a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#section-contact .contact .option {
+    border: solid 1px;
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+}
+
+#section-contact .contact .option:hover {
+    background-color: #111;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+/* contact section end */
+/* footer start */
+footer p {
+    display: flex;
+    justify-content: center;
+}
+/* footer end */
